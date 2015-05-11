@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RedisTicket.Domain
+namespace RedisTicket.TableEntity
 {
-    public class StockItem
+    public class StockItemTable
     {
         public Int64 Id { get; set; }
 
@@ -14,7 +14,6 @@ namespace RedisTicket.Domain
 
         public Int64 OrderId { get; set; }
 
-        
         public Int64 CreatedUserId { get; set; }
         public DateTime CreatedDate { get; set; }
 

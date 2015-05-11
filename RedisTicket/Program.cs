@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using RedisTicket.Domain;
+using RedisTicket.Tests;
 
 namespace RedisTicket
 {
@@ -17,8 +18,8 @@ namespace RedisTicket
             ThreadPool.GetMaxThreads(out worker, out ioCompletion);
             Console.WriteLine("{0} / {1}", worker, ioCompletion);
 
-            TestPerformance testPerformance = new TestPerformance();
-            testPerformance.Test();
+            OrderTest testCase = new OrderTest();
+            testCase.CreateOrderTest();
 
 
             Console.Write("finish");

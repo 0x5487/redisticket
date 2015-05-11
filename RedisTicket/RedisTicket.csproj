@@ -32,8 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.1.42\lib\net45\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="JasonSoft.Core">
-      <HintPath>D:\OpenSource\YuShan\_development\packages\JasonSoft.Core.dll</HintPath>
+      <HintPath>..\..\JasonRepo\BuildedDLL\JasonSoft.Core.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -43,6 +46,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\DAO\OrderDAO.cs" />
+    <Compile Include="Data\DAO\StockItemDAO.cs" />
+    <Compile Include="Data\TicketRepository.cs" />
     <Compile Include="Domain\BuyItem.cs" />
     <Compile Include="Domain\Event.cs" />
     <Compile Include="Domain\Ticket.cs" />
@@ -58,9 +65,15 @@
     <Compile Include="Domain\StockItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\InventoryService.cs" />
     <Compile Include="Services\IOrderService.cs" />
+    <Compile Include="Services\OrderService.cs" />
     <Compile Include="Services\TicketMachineService.cs" />
-    <Compile Include="TestPerformance.cs" />
+    <Compile Include="Data\TableEntity\OrderTable.cs" />
+    <Compile Include="Data\TableEntity\StockItemTable.cs" />
+    <Compile Include="Tests\InventoryTest.cs" />
+    <Compile Include="Tests\OrderTest.cs" />
+    <Compile Include="Tests\TicketMachineTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -70,6 +83,10 @@
     <None Include="Scripts\checkTicket.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\Inventory.sql" />
+    <Content Include="Database\Order.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

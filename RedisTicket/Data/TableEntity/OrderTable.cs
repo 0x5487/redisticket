@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RedisTicket.Domain
+namespace RedisTicket.TableEntity
 {
-    public class StockItem
+    public class OrderTable
     {
         public Int64 Id { get; set; }
 
-        public Int64 TicketId { get; set; }
+        public string OrderNumber { get; set; }
 
-        public Int64 OrderId { get; set; }
+        public string Data { get; set; }
 
-        
         public Int64 CreatedUserId { get; set; }
+
         public DateTime CreatedDate { get; set; }
 
         public Int64 LastModifiedUserId { get; set; }

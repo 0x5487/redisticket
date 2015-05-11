@@ -16,6 +16,6 @@ namespace RedisTicket.Domain
 
         public Int32 Quantity { get; set; }
 
-        public List<StockItem> StockItems { get; set; }
+        public IList<int> StockItemIds { get; set; }
     }
 }

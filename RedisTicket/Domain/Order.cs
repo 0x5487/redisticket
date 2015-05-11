@@ -8,19 +8,21 @@ namespace RedisTicket.Domain
 {
     public class Order
     {
-        public Int64 Id { get; set; }
+        public Int32 Id { get; set; }
 
-        public string OrderId { get; set; }
+        public string OrderNumber { get; set; }
 
-        public LineItem[] LineItems { get; set; }
+        public IList<LineItem> LineItems { get; set; }
 
         public decimal Total { get; set; }
 
-        public decimal Total_With_Tax { get; set; }
+        public decimal TotalWithTax { get; set; }
 
-        public decimal Total_Without_Tax { get; set; }
+        public decimal TotalWithoutTax { get; set; }
 
-        public DateTime Paid_Date_UTC { get; set; }
+        public DateTime PaidDate { get; set; }
+
+        public DateTime ExpiryDate { get; set; }
 
 
     }

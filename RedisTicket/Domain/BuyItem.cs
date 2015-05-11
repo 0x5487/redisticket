@@ -18,6 +18,8 @@ namespace RedisTicket.Domain
 
         public IList<String> StockItems { get; set; }
 
+        public IList<int> StockItemIds { get; set; }
+
 
     }
 }

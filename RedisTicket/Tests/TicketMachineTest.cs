@@ -9,7 +9,7 @@ using StackExchange.Redis;
 
 namespace RedisTicket
 {
-    public class TestPerformance
+    public class TicketMachineTest
     {
         private TicketMachineService _ticketMachineService;
         private Int64 _ticketA = 8990;
@@ -60,7 +60,7 @@ namespace RedisTicket
             return task;
         }
 
-        public TestPerformance()
+        public TicketMachineTest()
         {
             ConfigurationOptions option = new ConfigurationOptions();
             option.ConnectTimeout = 30000;
